@@ -1,0 +1,41 @@
+.footer {
+  background-color: palevioletred;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.dark-theme .footer {
+  background-color: maroon;
+}
+
+.footer__container {
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__link {
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: lightpink;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}

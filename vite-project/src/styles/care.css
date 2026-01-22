@@ -1,0 +1,132 @@
+.care {
+  padding: 1rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.care__title {
+  font-size: 2rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark-theme .care__title {
+  color: hotpink;
+}
+
+.care__intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.care__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.accordion-item {
+  border: 0.125rem solid pink;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.dark-theme .accordion-item {
+  background-color: gray;
+  border-color: palevioletred;
+}
+
+.accordion-item__button {
+  width: 100%;
+  padding: 1rem;
+  background-color: lavenderblush;
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.dark-theme .accordion-item__button {
+  background-color: dimgray;
+  color: mistyrose;
+}
+
+.accordion-item__button:hover {
+  background-color: pink;
+}
+
+.dark-theme .accordion-item__button:hover {
+  background-color: gray;
+}
+
+.accordion-item__button--active {
+  background-color: pink;
+}
+
+.dark-theme .accordion-item__button--active {
+  background-color: palevioletred;
+}
+
+.accordion-item__title {
+  font-weight: bold;
+  color: palevioletred;
+}
+
+.dark-theme .accordion-item__title {
+  color: hotpink;
+}
+
+.accordion-item__icon {
+  font-size: 1.5rem;
+  color: palevioletred;
+}
+
+.dark-theme .accordion-item__icon {
+  color: hotpink;
+}
+
+.accordion-item__content {
+  padding: 1rem;
+  background-color: white;
+}
+
+.dark-theme .accordion-item__content {
+  background-color: gray;
+}
+
+.accordion-item__text {
+  line-height: 1.8;
+}
+
+.care__tip {
+  padding: 1.5rem;
+  background-color: lavenderblush;
+  border-radius: 0.5rem;
+  border-left: 0.25rem solid palevioletred;
+}
+
+.dark-theme .care__tip {
+  background-color: gray;
+  border-left-color: hotpink;
+}
+
+.care__tip-title {
+  font-size: 1.25rem;
+  color: palevioletred;
+  margin-bottom: 0.5rem;
+}
+
+.dark-theme .care__tip-title {
+  color: hotpink;
+}
+
+.care__tip-text {
+  line-height: 1.8;
+}
