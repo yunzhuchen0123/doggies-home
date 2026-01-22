@@ -25,48 +25,6 @@ Clean CSS organization: src/styles/*.css per-page + global.css
 
 Image assets in public/ for straightforward referencing
 
-🗂 Project Structure
-doggies-home/
-├─ docs/                          # built files & screenshots (for Pages)
-│  ├─ home.png
-│  ├─ breeds.png
-│  ├─ quiz.png
-│  ├─ about.png
-│  └─ care guide.png
-└─ vite-project/                  # React + Vite source
-   ├─ public/
-   │  ├─ bernedoodle.jpg
-   │  ├─ Goldendoodle.jpg
-   │  ├─ Long-coat Dachshund.jpg
-   │  ├─ pomsky.jpg
-   │  ├─ poodle.jpg
-   │  └─ vite.svg
-   ├─ src/
-   │  ├─ components/
-   │  │  ├─ DogCard.jsx
-   │  │  ├─ Header.jsx
-   │  │  └─ Footer.jsx
-   │  ├─ pages/
-   │  │  ├─ Home.jsx
-   │  │  ├─ Breeds.jsx
-   │  │  ├─ Care.jsx
-   │  │  ├─ About.jsx
-   │  │  └─ Quiz.jsx
-   │  ├─ styles/
-   │  │  ├─ app.css
-   │  │  ├─ global.css
-   │  │  ├─ header.css
-   │  │  ├─ footer.css
-   │  │  ├─ home.css
-   │  │  ├─ breeds.css
-   │  │  ├─ care.css
-   │  │  └─ quiz.css
-   │  ├─ App.jsx
-   │  └─ main.jsx
-   ├─ index.html
-   ├─ package.json
-   └─ vite.config.js
-
 🚀 Getting Started (Local Dev)
 cd vite-project
 npm install
