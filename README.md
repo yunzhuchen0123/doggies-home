@@ -90,7 +90,7 @@ Clear repo structure ✔ (source vs. docs, README included)
 ![Breeds](docs/breeds.png)
 ![Quiz](docs/quiz.png)
 ![About](docs/about.png)
-![Care](docs/care-guide.png) 
+![Care guide](docs/care-guide.png) 
 
 
 🧾 License & Credits
