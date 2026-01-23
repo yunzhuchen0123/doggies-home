@@ -38,7 +38,7 @@ npm run preview   # preview built site locally
 
 🔧 Vite Config for GitHub Pages
 
-vite-project/vite.config.js (关键配置已设置好)：
+vite-project/vite.config.js：
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -46,8 +46,8 @@ import react from '@vitejs/plugin-react'
 // IMPORTANT: update base if you rename the repo
 export default defineConfig({
   plugins: [react()],
-  base: '/doggies-home/',      // 🔧 仓库名
-  build: { outDir: '../docs' } // 构建输出到上级 docs 目录
+  base: '/doggies-home/',     
+  build: { outDir: '../docs' } 
 })
 
 
