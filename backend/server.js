@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
   res.json({ message: 'Pawfect Pups API is running!' });
 });
 
+console.log('MONGODB_URI:', process.env.MONGODB_URI ? 'exists' : 'missing');
+
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));

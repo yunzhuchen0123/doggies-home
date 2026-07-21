@@ -7,8 +7,9 @@ import Care from './pages/Care';
 import Quiz from './pages/Quiz';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import './styles/app.css';
 import Identify from './pages/Identify';
+import Login from './pages/Login';
+import './styles/app.css';
 
 const ROUTES = {
   '#/': Home,
@@ -16,7 +17,8 @@ const ROUTES = {
   '#/care': Care,
   '#/quiz': Quiz,
   '#/about': About,
-  '#/identify': Identify
+  '#/identify': Identify,
+  '#/login': Login
 };
 
 function getCurrentHash() {
@@ -27,7 +29,6 @@ function readStored(key, fallback) {
   try {
     return window.localStorage.getItem(key) ?? fallback;
   } catch {
-    // Storage can be unavailable (private mode, blocked cookies) - fall back quietly.
     return fallback;
   }
 }
@@ -36,27 +37,24 @@ function writeStored(key, value) {
   try {
     window.localStorage.setItem(key, value);
   } catch {
-    // Ignore write failures - persistence is a nicety, not a requirement.
   }
 }
 
 function App() {
   const [page, setPage] = useState(getCurrentHash);
   const [theme, setTheme] = useState(() => readStored('pawfect:theme', 'light'));
-  const [userName, setUserName] = useState(() => readStored('pawfect:userName', 'Friend'));
+  const [user, setUser] = useState(() => {
+    const stored = readStored('pawfect:user', null);
+    return stored ? JSON.parse(stored) : null;
+  });
 
   useEffect(() => {
     function handleHashChange() {
       setPage(getCurrentHash());
     }
-
-    // hashchange is the event that actually fires for #-based navigation.
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   useEffect(() => {
@@ -64,10 +62,26 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    writeStored('pawfect:userName', userName);
-  }, [userName]);
+    if (user) {
+      writeStored('pawfect:user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('pawfect:user');
+    }
+  }, [user]);
+
+  function handleLogin(userData) {
+    setUser(userData);
+    window.location.hash = '#/';
+  }
+
+  function handleLogout() {
+    setUser(null);
+    localStorage.removeItem('token');
+    localStorage.removeItem('pawfect:user');
+  }
 
   const PageComponent = ROUTES[page] || NotFound;
+  const userName = user ? user.name : 'Friend';
 
   return (
     <div className={theme === 'dark' ? 'app dark-theme' : 'app'}>
@@ -77,10 +91,15 @@ function App() {
         theme={theme}
         setTheme={setTheme}
         userName={userName}
-        setUserName={setUserName}
+        user={user}
+        onLogout={handleLogout}
       />
       <main id="main" tabIndex="-1">
-        <PageComponent />
+        {page === '#/login' ? (
+          <Login onLogin={handleLogin} />
+        ) : (
+          <PageComponent user={user} />
+        )}
       </main>
       <Footer />
     </div>

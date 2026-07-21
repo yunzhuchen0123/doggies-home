@@ -1,31 +1,13 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import '../styles/header.css';
 
-function Header({ currentPage, theme, setTheme, userName, setUserName }) {
+function Header({ currentPage, theme, setTheme, userName, user, onLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const dialogRef = useRef();
-  const [tempName, setTempName] = useState('');
 
   function handleNavClick(e, newPage) {
     e.preventDefault();
     window.location.hash = newPage;
     setMenuOpen(false);
-  }
-
-  function openModal() {
-    setTempName(userName);
-    dialogRef.current.showModal();
-  }
-
-  function closeModal() {
-    dialogRef.current.close();
-  }
-
-  function handleSave() {
-    if (tempName.trim()) {
-      setUserName(tempName.trim());
-    }
-    closeModal();
   }
 
   function toggleTheme() {
@@ -95,35 +77,24 @@ function Header({ currentPage, theme, setTheme, userName, setUserName }) {
 
         <div className="header__controls">
           <span className="header__greeting">Hello, {userName}!</span>
-          <button className="header__button" onClick={openModal}>
-            Edit Name
-          </button>
+          {user ? (
+            <button className="header__button" onClick={onLogout}>
+              Log Out
+            </button>
+          ) : (
+            <a 
+              href="#/login" 
+              className="header__button"
+              onClick={(e) => handleNavClick(e, '#/login')}
+            >
+              Log In
+            </a>
+          )}
           <button className="header__button" onClick={toggleTheme}>
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
         </div>
       </div>
-
-      <dialog ref={dialogRef} className="modal">
-        <h2 className="modal__title">Change Your Name</h2>
-        <label className="modal__label">
-          <span className="modal__label-text">Enter your name:</span>
-          <input 
-            type="text"
-            className="modal__input"
-            value={tempName}
-            onChange={(e) => setTempName(e.target.value)}
-          />
-        </label>
-        <div className="modal__buttons">
-          <button className="modal__button modal__button--primary" onClick={handleSave}>
-            Save
-          </button>
-          <button className="modal__button" onClick={closeModal}>
-            Cancel
-          </button>
-        </div>
-      </dialog>
     </header>
   );
 }
