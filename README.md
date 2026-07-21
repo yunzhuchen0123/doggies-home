@@ -1,104 +1,86 @@
-Doggies Home 🐶
+# 🐶 Pawfect Pups
 
-Interactive dog-breed website built with React + Vite.
-Live demo: https://yunzhuchen0123.github.io/doggies-home/
+A modern React web application for dog breed exploration, featuring **AI-powered breed identification** using TensorFlow.js.
 
-This repo mirrors the structure of a portfolio-friendly project:
+**Live Demo:** https://yunzhuchen0123.github.io/doggies-home/
 
-Source code in vite-project/
+![Home Page](docs/home.png)
 
-Static site in docs/ (for GitHub Pages)
+---
 
-✨ Features
+## ✨ Features
 
-Home / Breeds / Care / About / Quiz five views
+### 🤖 AI Breed Identifier
+Upload any dog photo and get instant breed recognition powered by TensorFlow.js — runs entirely in the browser with no server required.
 
-Breed Cards: image + traits (componentized DogCard)
+### 🏠 Core Features
+- **6 Interactive Pages** — Home, Breeds, Care Guide, Quiz, About, AI Identify
+- **Smart Breed Quiz** — Answer questions to find your perfect dog match
+- **Breed Gallery** — Filter by size/energy, sort by name
+- **Care Guide** — Expandable accordion sections with dog care tips
+- **Dark/Light Theme** — Toggle with localStorage persistence
+- **Personalized Greeting** — Edit and save your name
 
-Interactive Quiz: simple questions → gives breed suggestions
+### ♿ Accessibility
+- Skip-to-content link
+- Semantic HTML structure
+- ARIA attributes for interactive elements
+- Keyboard navigation support
+- prefers-reduced-motion support
 
-Responsive Layout: works on mobile / tablet / desktop
+### 📱 Responsive Design
+- Mobile-first approach
+- Adaptive hamburger menu
+- Fluid grid layouts
+- Works on all screen sizes (360px - 1920px+)
 
-Accessibility: skip-to-content, labeled forms, alt text, focus styles
+---
 
-Clean CSS organization: src/styles/*.css per-page + global.css
+## 🛠️ Tech Stack
 
-Image assets in public/ for straightforward referencing
+| Category | Technologies |
+|----------|-------------|
+| Frontend | React 18, JavaScript ES6+ |
+| AI/ML | TensorFlow.js, MobileNet |
+| Styling | CSS3, BEM methodology |
+| Build | Vite |
+| Deployment | GitHub Pages |
 
-🚀 Getting Started (Local Dev)
-cd vite-project
+---
+
+## 🚀 Getting Started
+
+git clone https://github.com/yunzhuchen0123/doggies-home.git
+cd doggies-home/vite-project
 npm install
 npm run dev
-# Then open the shown URL, usually http://localhost:5173/
 
-🧱 Scripts
-npm run dev       # start Vite dev server
-npm run build     # production build
-npm run preview   # preview built site locally
+Open http://localhost:5173/doggies-home/ in your browser.
 
-🔧 Vite Config for GitHub Pages
+---
 
-vite-project/vite.config.js：
+## 📸 Screenshots
 
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+| Home | Breeds | Care Guide |
+|------|--------|------------|
+| ![Home](docs/home.png) | ![Breeds](docs/breeds.png) | ![Care](docs/care-guide.png) |
 
-// IMPORTANT: update base if you rename the repo
-export default defineConfig({
-  plugins: [react()],
-  base: '/doggies-home/',     
-  build: { outDir: '../docs' } 
-})
+| Quiz | About |
+|------|-------|
+| ![Quiz](docs/quiz.png) | ![About](docs/about.png) |
 
+---
 
-Build & publish to docs/:
+## 📝 License & Credits
 
-cd vite-project
-npm run build
-cd ..
-git add docs
-git commit -m "build: publish site to docs"
-git push
+- Personal dog photos owned by the author
+- Additional images from Unsplash (see vite-project/licenses.txt)
+- AI model: TensorFlow.js MobileNet
 
+---
 
-Then enable GitHub Pages:
-Settings → Pages → Source = Deploy from a branch → Branch = main / Folder = /docs.
+## 👩‍💻 Author
 
-🧭 Routing Note
+**Ruby Chen** (Yunzhu Chen)
 
-This project uses simple view components (no external router).
-If you add React Router later for more routes, keep base set to /doggies-home/ and ensure assets use paths that work on Pages.
-
-✅ Course Requirements Mapping (sample)
-
-Semantic HTML & accessible forms ✔ (label + aria-*, focus styles)
-
-Responsive layout ✔ (CSS breakpoints; fluid grid/cards)
-
-Multi-page/views ✔ (Home / Breeds / Care / About / Quiz)
-
-Interactive feature ✔ (Quiz with state)
-
-External assets & attribution ✔ (see licenses.txt)
-
-Clear repo structure ✔ (source vs. docs, README included)
-
-
-📸 Screenshots
-
-![Home](docs/home.png)
-![Breeds](docs/breeds.png)
-![Quiz](docs/quiz.png)
-![About](docs/about.png)
-![Care](docs/care-guide.png) 
-
-
-🧾 License & Credits
-
-
-Images: see vite-project/licenses.txt for attributions and allowed use.
-
-✍️ Author
-
-Ruby Chen (Yunzhu Chen)
 GitHub: https://github.com/yunzhuchen0123
