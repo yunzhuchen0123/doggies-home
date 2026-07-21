@@ -1,0 +1,43 @@
+.dog-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+  border: 0.125rem solid pink;
+}
+
+.dark-theme .dog-card {
+  background-color: gray;
+  border-color: palevioletred;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dog-card:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
+.dog-card__image {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+.dog-card__content {
+  padding: 1rem;
+}
+
+.dog-card__name {
+  font-size: 1.25rem;
+  color: palevioletred;
+  margin-bottom: 0.5rem;
+}
+
+.dark-theme .dog-card__name {
+  color: hotpink;
+}
+
+.dog-card__detail {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}

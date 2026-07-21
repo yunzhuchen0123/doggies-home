@@ -1,0 +1,37 @@
+.not-found {
+  padding: 3rem 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: 2rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+}
+
+.dark-theme .not-found__title {
+  color: hotpink;
+}
+
+.not-found__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.not-found__link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: palevioletred;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.not-found__link:hover,
+.not-found__link:focus {
+  background-color: hotpink;
+}

@@ -1,0 +1,139 @@
+.quiz {
+  padding: 1rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.quiz__title {
+  font-size: 2rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark-theme .quiz__title {
+  color: hotpink;
+}
+
+.quiz__intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.quiz__form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 0.125rem solid pink;
+  margin-bottom: 2rem;
+}
+
+.dark-theme .quiz__form {
+  background-color: gray;
+  border-color: palevioletred;
+}
+
+.quiz__field {
+  margin-bottom: 1.5rem;
+}
+
+.quiz__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: palevioletred;
+}
+
+.dark-theme .quiz__label {
+  color: hotpink;
+}
+
+.quiz__select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.125rem solid pink;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.dark-theme .quiz__select {
+  background-color: dimgray;
+  color: mistyrose;
+  border-color: palevioletred;
+}
+
+.quiz__select--error {
+  border-color: red;
+  border-width: 0.1875rem;
+}
+
+.quiz__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.125rem solid pink;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.dark-theme .quiz__input {
+  background-color: dimgray;
+  color: mistyrose;
+  border-color: palevioletred;
+}
+
+.quiz__input--error {
+  border-color: red;
+  border-width: 0.1875rem;
+}
+
+.quiz__error {
+  display: block;
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.quiz__submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.quiz__submit:hover {
+  background-color: deeppink;
+}
+
+.quiz__result {
+  padding: 2rem;
+  background-color: lavenderblush;
+  border-radius: 0.5rem;
+  border-left: 0.25rem solid palevioletred;
+}
+
+.dark-theme .quiz__result {
+  background-color: gray;
+  border-left-color: hotpink;
+}
+
+.quiz__result-title {
+  font-size: 1.5rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+}
+
+.dark-theme .quiz__result-title {
+  color: hotpink;
+}
+
+.quiz__result-text {
+  font-size: 1rem;
+  line-height: 1.8;
+}

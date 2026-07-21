@@ -1,0 +1,187 @@
+.identify {
+  padding: 1rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.identify__title {
+  font-size: 2rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark-theme .identify__title {
+  color: hotpink;
+}
+
+.identify__intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.identify__dropzone {
+  border: 0.2rem dashed pink;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dark-theme .identify__dropzone {
+  background-color: gray;
+  border-color: palevioletred;
+}
+
+.identify__placeholder {
+  color: palevioletred;
+}
+
+.dark-theme .identify__placeholder {
+  color: hotpink;
+}
+
+.identify__icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.identify__preview {
+  max-width: 100%;
+  max-height: 20rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+.identify__upload-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: hotpink;
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.identify__upload-btn:hover {
+  background-color: deeppink;
+}
+
+.identify__input {
+  display: none;
+}
+
+.identify__submit {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.identify__submit:hover:not(:disabled) {
+  background-color: deeppink;
+}
+
+.identify__submit:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.identify__error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.identify__result {
+  background-color: lavenderblush;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 0.25rem solid palevioletred;
+}
+
+.dark-theme .identify__result {
+  background-color: gray;
+  border-left-color: hotpink;
+}
+
+.identify__result-title {
+  font-size: 1.5rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+}
+
+.dark-theme .identify__result-title {
+  color: hotpink;
+}
+
+.identify__breed {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.identify__predictions {
+  margin-bottom: 1.5rem;
+}
+
+.identify__predictions h4 {
+  color: palevioletred;
+  margin-bottom: 0.5rem;
+}
+
+.dark-theme .identify__predictions h4 {
+  color: hotpink;
+}
+
+.identify__list {
+  list-style: none;
+  padding: 0;
+}
+
+.identify__list-item {
+  padding: 0.5rem;
+  background-color: white;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.dark-theme .identify__list-item {
+  background-color: dimgray;
+}
+
+.identify__match {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 0.0625rem solid pink;
+}
+
+.identify__match h4 {
+  color: palevioletred;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark-theme .identify__match h4 {
+  color: hotpink;
+}
+
+.identify__card {
+  max-width: 20rem;
+  margin: 0 auto;
+}

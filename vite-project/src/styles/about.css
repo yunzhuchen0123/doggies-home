@@ -1,0 +1,44 @@
+.about {
+  padding: 1rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: 2rem;
+  color: palevioletred;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dark-theme .about__title {
+  color: hotpink;
+}
+
+.about__section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 0.125rem solid pink;
+}
+
+.dark-theme .about__section {
+  background-color: gray;
+  border-color: palevioletred;
+}
+
+.about__heading {
+  font-size: 1.5rem;
+  color: palevioletred;
+  margin-bottom: 1rem;
+}
+
+.dark-theme .about__heading {
+  color: hotpink;
+}
+
+.about__text {
+  font-size: 1rem;
+  line-height: 1.8;
+}

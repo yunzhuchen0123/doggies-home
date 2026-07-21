@@ -1,0 +1,41 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: mistyrose;
+  transition: background-color 0.3s;
+}
+
+.dark-theme {
+  background-color: dimgray;
+  color: mistyrose;
+}
+
+.skiplink {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: hotpink;
+  color: white;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.skiplink:focus {
+  left: 0.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,193 @@
+.header {
+  background-color: palevioletred;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dark-theme .header {
+  background-color: maroon;
+}
+
+.header__container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.header__nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header__nav--open {
+  display: flex;
+}
+
+.header__link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.header__link:hover {
+  background-color: hotpink;
+}
+
+.header__link--active {
+  background-color: deeppink;
+  font-weight: bold;
+}
+
+.header__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.header__greeting {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.header__button {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.header__button:hover {
+  background-color: deeppink;
+}
+
+.modal {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 25rem;
+  background-color: white;
+}
+
+.dark-theme .modal {
+  background-color: dimgray;
+  color: mistyrose;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: palevioletred;
+}
+
+.dark-theme .modal__title {
+  color: hotpink;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal__label-text {
+  font-weight: bold;
+}
+
+.modal__input {
+  padding: 0.5rem;
+  border: 0.125rem solid pink;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.modal__buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.modal__button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal__button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.modal__button--primary {
+  background-color: hotpink;
+  color: white;
+}
+
+.modal__button--primary:hover {
+  background-color: deeppink;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__menu-toggle {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header__controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__greeting {
+    font-size: 1rem;
+  }
+}
